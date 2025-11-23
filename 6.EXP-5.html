@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Registration Form</title>
+</head>
+
+<body>
+
+    <h2 align="center">Student Registration Form</h2>
+
+    <form method="post" action="submit.html">
+        <fieldset>
+            <p>
+                Full Name:
+                <input type="text" name="fullName" placeholder="Enter your full name" required>
+            </p>
+            <p>
+                Email:
+                <input type="email" name="email" placeholder="Enter valid email address" required>
+            </p>
+            <p>
+                                Password:
+                                <input type="password" name="password" placeholder="Enter password" required>
+                            </p>
+            <p>
+                Gender:
+                <input type="radio" name="gender" value="male"> Male
+                <input type="radio" name="gender" value="female"> Female
+                <input type="radio" name="gender" value="other"> Other
+            </p>
+            <p>
+                                Course:
+                                <select name="course">
+                                        <option value="">--Select Course--</option>
+                                        <option value="cse">CSE</option>
+                                        <option value="ece">ECE</option>
+                                        <option value="mech">Mechanical</option>
+                                    </select>
+                            </p>
+            <p>
+                Contact Number:
+                <input type="text" name="contact">
+            </p>
+            <p>
+                Address:<br>
+                <textarea name="address" rows="4" cols="30"></textarea>
+            </p>
+            <p>
+                <input type="submit" value="Register">
+                <input type="reset" value="Clear">
+            </p>
+        </fieldset>
+    </form>
+
+    <p align="center">© 2025 Student Registration Portal</p>
+
+</body>
+
+</html>
