@@ -1,41 +1,45 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Navigation Assignment</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Navigation</title>
     <style>
-        .container {
-            border: 2px solid black;
-            padding: 10px;
+        body {
             font-family: "Times New Roman", Times, serif;
         }
-
-        .header {
-            background-color: #d3d3d3; 
-            text-align: center;
-            padding: 15px;
-            font-weight: bold;
-            margin-bottom: 10px;
+        .container {
+            border: 1px solid black;
+            width: 100%;
+            padding-bottom: 20px;
         }
-
+        .header {
+            background-color: #dcdcdc;
+            text-align: center;
+            padding: 20px 0;
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
         .red-text {
             color: red;
         }
-
-        .nav-row a {
+        .nav-row {
+            padding-left: 10px;
+            margin-bottom: 10px;
+        }
+        .nav-item {
             display: inline-block;
-            text-decoration: none; 
-            color: black; 
-            padding: 5px 10px;
-            margin-right: 5px; 
-            margin-bottom: 5px;
+            padding: 2px 5px;
+            margin-right: 5px;
+            font-size: 16px;
         }
-
-        .blue-links a {
-            background-color: lightblue;
+        .blue-style {
+            background-color: #add8e6;
+            color: blue;
         }
-
-        .green-links a {
-            background-color: lightgreen;
+        .green-style {
+            background-color: #90ee90;
+            color: black;
         }
     </style>
 </head>
@@ -46,18 +50,18 @@
             My <span class="red-text">Website</span> Navigation
         </div>
 
-        <div class="nav-row blue-links">
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Services</a>
-            <a href="#">Contact</a>
+        <div class="nav-row">
+            <span class="nav-item blue-style">Home</span>
+            <span class="nav-item blue-style">About</span>
+            <span class="nav-item blue-style">Services</span>
+            <span class="nav-item blue-style">Contact</span>
         </div>
 
-        <div class="nav-row green-links">
-            <a href="#">Dashboard</a>
-            <a href="#">Profile</a>
-            <a href="#">Messages</a>
-            <a href="#">Logout</a>
+        <div class="nav-row">
+            <span class="nav-item green-style">Dashboard</span>
+            <span class="nav-item green-style">Profile</span>
+            <span class="nav-item green-style">Messages</span>
+            <span class="nav-item green-style">Logout</span>
         </div>
     </div>
 
