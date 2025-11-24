@@ -3,117 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ShopEasy</title>
+    <title>ShopEasy Product Card</title>
     <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            background-color: #ffffff;
+            background-color: #f0f4f8;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
         }
-        .label {
-            font-size: 18px;
-            margin-bottom: 15px;
-            color: #000;
-        }
-        .container {
-            border: 1px solid #000;
-            max-width: 800px;
-            background-color: #f9fbfd;
-            padding-bottom: 50px;
-        }
+
         .header {
-            background-color: #232323;
-            color: white;
-            text-align: center;
-            padding: 15px 0;
-            font-size: 22px;
-            margin-bottom: 40px;
-        }
-        .card {
-            background-color: white;
-            width: 250px;
-            margin: 0 auto;
-            padding: 10px;
-            border: 1px solid #e5e5e5;
-            border-radius: 3px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-        }
-        .image-box {
+            background-color: #1a1a1a;
+            color: #ffffff;
             width: 100%;
-            height: 160px;
-            background-color: #f4f4f4;
+            padding: 14px 0;
+            text-align: center;
+            font-size: 20px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            margin-bottom: 40px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .product-card {
+            background-color: #ffffff;
+            width: 320px;
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+            padding: 16px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        .image-container {
+            width: 100%;
+            height: 180px;
+            background-color: #f5f5f5;
             display: flex;
             justify-content: center;
             align-items: center;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
+            border-radius: 2px;
+            overflow: hidden;
         }
-        .image-box img {
-            max-height: 100%;
+
+        .image-container img {
+            max-height: 90%;
+            max-width: 100%;
             object-fit: contain;
         }
-        h3 {
+
+        .product-title {
+            font-size: 15px;
+            font-weight: 700;
+            color: #111;
+            margin-bottom: 6px;
+        }
+
+        .product-description {
+            font-size: 12px;
+            color: #666;
+            line-height: 1.4;
+            margin-bottom: 10px;
+        }
+
+        .price-row {
+            display: flex;
+            align-items: baseline;
+            gap: 8px;
+            margin-bottom: 16px;
             font-size: 14px;
-            margin: 5px 0;
-            color: #000;
+        }
+
+        .current-price {
+            color: #008a3e;
             font-weight: 700;
         }
-        .desc {
-            font-size: 11px;
-            color: #666;
-            margin-bottom: 8px;
-            line-height: 1.4;
-        }
-        .price-row {
-            margin-bottom: 10px;
-            font-size: 14px;
-        }
-        .price {
-            color: #1e7e34;
-            font-weight: bold;
-            margin-right: 5px;
-        }
-        .old-price {
-            color: #999;
+
+        .original-price {
+            color: #a0a0a0;
             text-decoration: line-through;
-            font-size: 12px;
+            font-size: 13px;
         }
-        button {
+
+        .add-to-cart-btn {
+            width: 100%;
             background-color: #0062cc;
             color: white;
             border: none;
-            width: 100%;
-            padding: 8px 0;
+            padding: 10px 0;
             font-size: 13px;
-            border-radius: 3px;
+            font-weight: 500;
+            border-radius: 4px;
             cursor: pointer;
+            transition: background-color 0.2s ease;
         }
-        button:hover {
-            background-color: #0056b3;
+
+        .add-to-cart-btn:hover {
+            background-color: #0052ac;
         }
     </style>
 </head>
 <body>
 
-    <div class="label">Output:</div>
+    <div class="header">
+        ShopEasy
+    </div>
 
-    <div class="container">
-        <div class="header">ShopEasy</div>
-        
-        <div class="card">
-            <div class="image-box">
-                <img src="https://i.ibb.co/tpjH6v0z/Screenshot-2025-11-10-093151.png">
-                </div>
-            
-            <h3>Classic Cotton T-Shirt</h3>
-            <div class="desc">Soft, breathable cotton. Regular fit. Available in multiple colors.</div>
-            
-            <div class="price-row">
-                <span class="price">₹799</span>
-                <span class="old-price">₹1,199</span>
-            </div>
-            
-            <button>Add to Cart</button>
+    <div class="product-card">
+        <div class="image-container">
+            <img src="https://i.ibb.co/tpjH6v0z/Screenshot-2025-11-10-093151.png" alt="Green T-Shirt">
         </div>
+
+        <div class="product-title">Classic Cotton T-Shirt</div>
+        
+        <div class="product-description">
+            Soft, breathable cotton. Regular fit. Available in multiple colors.
+        </div>
+
+        <div class="price-row">
+            <span class="current-price">₹799</span>
+            <span class="original-price">₹1,199</span>
+        </div>
+
+        <button class="add-to-cart-btn">Add to Cart</button>
     </div>
 
 </body>
