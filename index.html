@@ -5,35 +5,134 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Saksham's Web Development Index</title>
     <style>
-        body { font-family: sans-serif; padding: 20px; line-height: 1.6; max-width: 800px; margin: auto; }
-        h1 { color: #333; border-bottom: 2px solid #333; padding-bottom: 10px; }
-        ul { list-style-type: none; padding: 0; }
-        li { margin: 10px 0; background: #f4f4f4; padding: 10px; border-radius: 5px; }
-        a { text-decoration: none; color: #0066cc; font-weight: bold; font-size: 1.1em; display: block;}
-        a:hover { color: #004488; text-decoration: underline; }
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); /* Tech Blue Gradient */
+            min-height: 100vh;
+            padding: 40px 20px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            color: white;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        p.subtitle {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        /* Grid Layout for Links */
+        ul {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive Grid */
+            gap: 20px;
+        }
+
+        /* Card Styling */
+        li {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            overflow: hidden;
+        }
+
+        /* Hover Effect */
+        li:hover {
+            transform: translateY(-5px); /* Moves up slightly */
+            box-shadow: 0 12px 20px rgba(0,0,0,0.2);
+            background: white;
+        }
+
+        /* Link Styling */
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 25px;
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 600;
+            font-size: 1.1rem;
+            border-left: 5px solid transparent;
+            transition: border-color 0.3s;
+        }
+
+        /* Add a colored accent on hover */
+        a:hover {
+            color: #0056b3;
+            border-left: 5px solid #0056b3;
+        }
+
+        /* Arrow Icon */
+        a::after {
+            content: '→';
+            font-size: 1.2rem;
+            opacity: 0;
+            transform: translateX(-10px);
+            transition: all 0.3s ease;
+        }
+
+        a:hover::after {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 600px) {
+            h1 { font-size: 2rem; }
+            ul { grid-template-columns: 1fr; } /* Stack vertically on mobile */
+        }
     </style>
 </head>
 <body>
 
-    <h1>Saksham's Project Links</h1>
+    <div class="container">
+        <header>
+            <h1>Saksham's Project Index</h1>
+            <p class="subtitle">B.Tech CSE-DS • Web Development Portfolio</p>
+        </header>
 
-    <ul>
-        <li><a href="https://saksham237.github.io/WEB_DEVELOPMNT/02.EXP-1.html" target="_blank">02.EXP-1.html</a></li>
-        <li><a href="https://saksham237.github.io/WEB_DEVELOPMNT/03.EXP-2.html" target="_blank">03.EXP-2.html</a></li>
-        <li><a href="https://saksham237.github.io/WEB_DEVELOPMNT/04.EXP-3.html" target="_blank">04.EXP-3.html</a></li>
-        <li><a href="https://saksham237.github.io/WEB_DEVELOPMNT/05.EXP-4.html" target="_blank">05.EXP-4.html</a></li>
-        <li><a href="https://saksham237.github.io/WEB_DEVELOPMNT/06.EXP-5.html" target="_blank">06.EXP-5.html</a></li>
-        
-        <li><a href="https://saksham237.github.io/WEB_DEVELOPMNT/07.PRACTRICAL.html" target="_blank">07.PRACTRICAL.html</a></li>
-        
-        <li><a href="https://saksham237.github.io/WEB_DEVELOPMNT/08.%20EXP-6.html" target="_blank">08. EXP-6.html</a></li>
-        <li><a href="https://saksham237.github.io/WEB_DEVELOPMNT/09.%20EXP-7.html" target="_blank">09. EXP-7.html</a></li>
-        <li><a href="https://saksham237.github.io/WEB_DEVELOPMNT/10.%20TEST.html" target="_blank">10. TEST.html</a></li>
-        <li><a href="https://saksham237.github.io/WEB_DEVELOPMNT/11.%20EXP-8.html" target="_blank">11. EXP-8.html</a></li>
-        <li><a href="https://saksham237.github.io/WEB_DEVELOPMNT/12.%20EXP-9.html" target="_blank">12. EXP-9.html</a></li>
-        <li><a href="https://saksham237.github.io/WEB_DEVELOPMNT/13.%20EXP-10.html" target="_blank">13. EXP-10.html</a></li>
-        <li><a href="https://saksham237.github.io/WEB_DEVELOPMNT/14.%20EXP-10(extended).html" target="_blank">14. EXP-10.html(extended)</a></li>
-    </ul>
+        <ul>
+            <li><a href="https://saksham237.github.io/WEB_DEVELOPMNT/02.EXP-1.html" target="_blank">02. EXP-1 (Resume)</a></li>
+            <li><a href="https://saksham237.github.io/WEB_DEVELOPMNT/03.EXP-2.html" target="_blank">03. EXP-2 (Formatting)</a></li>
+            <li><a href="https://saksham237.github.io/WEB_DEVELOPMNT/04.EXP-3.html" target="_blank">04. EXP-3 (Lists)</a></li>
+            <li><a href="https://saksham237.github.io/WEB_DEVELOPMNT/05.EXP-4.html" target="_blank">05. EXP-4 (Timetable)</a></li>
+            <li><a href="https://saksham237.github.io/WEB_DEVELOPMNT/06.EXP-5.html" target="_blank">06. EXP-5 (Reg Form)</a></li>
+            
+            <li><a href="https://saksham237.github.io/WEB_DEVELOPMNT/07.PRACTRICAL.html" target="_blank">07. PRACTICAL</a></li>
+            
+            <li><a href="https://saksham237.github.io/WEB_DEVELOPMNT/08.%20EXP-6.html" target="_blank">08. EXP-6 (CSS Selectors)</a></li>
+            <li><a href="https://saksham237.github.io/WEB_DEVELOPMNT/09.%20EXP-7.html" target="_blank">09. EXP-7 (Box Model)</a></li>
+            <li><a href="https://saksham237.github.io/WEB_DEVELOPMNT/10.%20TEST.html" target="_blank">10. TEST</a></li>
+            <li><a href="https://saksham237.github.io/WEB_DEVELOPMNT/11.%20EXP-8.html" target="_blank">11. EXP-8 (Grid Layout)</a></li>
+            <li><a href="https://saksham237.github.io/WEB_DEVELOPMNT/12.%20EXP-9.html" target="_blank">12. EXP-9 (Responsive)</a></li>
+            <li><a href="https://saksham237.github.io/WEB_DEVELOPMNT/13.%20EXP-10.html" target="_blank">13. EXP-10 (Navbar)</a></li>
+            <li><a href="https://saksham237.github.io/WEB_DEVELOPMNT/14.%20EXP-10(extended).html" target="_blank">14. EXP-10 (Ext. Navbar)</a></li>
+        </ul>
+    </div>
 
 </body>
 </html>
